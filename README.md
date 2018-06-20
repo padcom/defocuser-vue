@@ -1,4 +1,4 @@
-## Defocuser
+## Defocuser Vue plugin
 
 It has been way too many times when I implemented (with greater or lesser success) automated way
 for closing dropdowns when clicking outside of them or by pressing the Escape key. This utility
@@ -6,27 +6,40 @@ is a way for me to stop repeating myself and have it working always the way it s
 
 ### Usage
 
-To use the Defocuser all you have to do is create an instance of the ```Defocuser``` class and then
-call the ```addElement``` method. This method takes 3 parameters:
+There are 2 directives in this package:
 
-* ```el``` - that is the root of your dropdown
-* ```phase``` - that should be either ```capture``` or ```bubbling```
-* ```callback``` - that is the callback called when the situation that the user clicked outside
-of the root.
+```v-defocus="method"``` - when this directive is added to an element and the user clicks
+outside of that element then the ```method``` will be called
 
-If for some reason there is an additional element (like an input or label that you use to toggle
-your dropdow) ```Defocuser``` has you covered with the ```setSecondaryElement``` method that takes
-the following parameters:
+```v-defocus-secondary="ref"``` when this directive is added alongside the ```v-defocus``` element
+then the algorithm for checking if the click was inside or outside will take both roots into account.
+This is useful when you have a label that is not a direct parent of your dropdown but you still want
+it to be treated just like it would be one.
 
-* ```el``` - that is the root of your dropdown (primary)
-* ```secondary``` - that additional element to be taken into account when checking if the actioned
-element is _inside_ or _outside_ of the dropdown
+You can either manually import those directives like so
+
+```
+import { defocus } from 'defocuser-vue'
+
+export default {
+  directives: {
+    defocus
+  },
+...
+}
+```
+
+or use it as a plugin and register both directives automatically:
+
+```
+import Vue from 'vue'
+import Defocuser from 'defocuser-vue'
+
+Vue.use(Defocuser)
+```
 
 ### Remarks
 
-The ```Defocuser``` uses ```MutationObserver``` to detect when the element has been removed from
-the DOM. So you should physically remove the element to clean things up.
-
-There is a gist showing how to use the Defocuser with Vue:
+Please see the following gist to see it in action:
 
 https://gist.github.com/padcom/0a4e4699813d983fc76dfde29406f9e6
