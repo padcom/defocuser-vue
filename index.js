@@ -1,4 +1,4 @@
-import Defocuser from 'defocuser'
+import { Defocuser } from 'defocuser'
 
 let defocuser = null
 
