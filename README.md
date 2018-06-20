@@ -40,6 +40,6 @@ Vue.use(Defocuser)
 
 ### Remarks
 
-Please see the following gist to see it in action:
+Please see the following repository to see it in action
 
-https://gist.github.com/padcom/0a4e4699813d983fc76dfde29406f9e6
+https://github.com/padcom/defocuser-example
