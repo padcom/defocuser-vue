@@ -11,6 +11,12 @@ There are 2 directives in this package:
 ```v-defocus="method"``` - when this directive is added to an element and the user clicks
 outside of that element then the ```method``` will be called
 
+The ```v-defocus``` directive takes 3 optional modifiers:
+
+* ```capture``` - use capture phase rather than bubbling phase
+* ```stop``` - call ```e.stopPropagation()``` on the ```click``` or ```keydown``` event. It is useful if you want to ensure that if the user clicks on for example a link that link won't be actioned.
+* ```prevent``` - call ```e.preventDefault()``` on the ```click``` or ```keydown``` event. It is useful if you want to stop propagation of the event, for example you want to make sure that clicking on another label of another dropdown that dropdown will not be opened automatically
+
 ```v-defocus-secondary="ref"``` when this directive is added alongside the ```v-defocus``` element
 then the algorithm for checking if the click was inside or outside will take both roots into account.
 This is useful when you have a label that is not a direct parent of your dropdown but you still want
