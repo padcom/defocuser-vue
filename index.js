@@ -5,7 +5,12 @@ let defocuser = null
 export const defocus = {
   inserted (el, options) {
     if (!defocuser) defocuser = new Defocuser()
-    defocuser.addElement(el, options.modifiers.capture ? 'capture' : 'bubbling', options.value || (() => {}))
+    defocuser.addElement(
+      el,
+      options.modifiers.capture ? 'capture' : 'bubbling',
+      options.value || (() => {}),
+      options.modifiers.stop,
+      options.modifiers.prevent)
   }
 }
 
