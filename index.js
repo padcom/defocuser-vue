@@ -1,8 +1,8 @@
-import { Defocuser } from 'defocuser'
+const { Defocuser } = require('defocuser')
 
 let defocuser = null
 
-export const defocus = {
+const defocus = {
   inserted (el, options) {
     if (!defocuser) defocuser = new Defocuser()
     defocuser.addElement(
@@ -14,7 +14,7 @@ export const defocus = {
   }
 }
 
-export const defocusSecondary = {
+const defocusSecondary = {
   inserted (el, options) {
     if (!defocuser) defocuser = new Defocuser()
     defocuser.setSecondaryElement(el, options.value)
@@ -34,13 +34,9 @@ const DefocuserLibrary = {
 Object.defineProperties(DefocuserLibrary, {
   defocuser: {
     get: function() {
-      return defocuser
+      return defocuser // instance of the actual defocuser
     }
   }
 })
 
-export default DefocuserLibrary
-
-if (typeof window !== 'undefined' && window.Vue) {
-  window.Vue.use(DefocuserLibrary)
-}
+module.exports = DefocuserLibrary
