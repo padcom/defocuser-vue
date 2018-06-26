@@ -46,6 +46,10 @@ Vue.use(Defocuser)
 
 ### Remarks
 
+Please see the following codepen for an example
+
+https://codepen.io/padcom/pen/NzLQGM
+
 Please see the following repository to see it in action
 
 https://github.com/padcom/defocuser-example
