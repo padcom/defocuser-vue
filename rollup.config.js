@@ -1,12 +1,14 @@
 import resolve from 'rollup-plugin-node-resolve'
 import uglify from 'rollup-plugin-uglify-es'
 
+import pkg from './package.json'
+
 export default {
-  input: 'index.js',
+  input: pkg.module,
   output: [ {
-    file: 'dist/defocuser-vue.iife.js',
+    file: pkg.main,
     format: 'iife',
-    name: 'defocuserVue',
+    name: 'DefocuserVue',
   } ],
   plugins: [
     resolve(),
