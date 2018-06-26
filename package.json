@@ -1,8 +1,12 @@
 {
   "name": "defocuser-vue",
-  "version": "0.0.6",
+  "version": "0.0.7-beta",
   "description": "Vue plugin for Defocuser",
-  "main": "index.js",
+  "main": "dist/defocuser-vue.umd.js",
+  "scripts": {
+    "dev": "rollup -c -n defocuser-vue -w",
+    "build": "rollup -c -n defocuser-vue"
+  },
   "keywords": [
     "defocuser",
     "vue",
@@ -15,6 +19,14 @@
     "url": "https://github.com/padcom/defocuser-vue"
   },
   "dependencies": {
-    "defocuser": "^0.0.8"
+    "defocuser": "0.0.9-beta"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "mkdirp": "^0.5.1",
+    "rollup": "^0.61.2",
+    "rollup-plugin-babel": "^3.0.5",
+    "rollup-plugin-minify": "^1.0.3"
   }
 }

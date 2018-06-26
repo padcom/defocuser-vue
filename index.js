@@ -1,4 +1,4 @@
-const { Defocuser } = require('defocuser')
+import Defocuser from 'defocuser'
 
 let defocuser = null
 
@@ -40,3 +40,7 @@ Object.defineProperties(DefocuserLibrary, {
 })
 
 module.exports = DefocuserLibrary
+
+if (window && window.Vue) {
+  window.Vue.use(DefocuserLibrary)
+}
