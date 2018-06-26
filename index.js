@@ -39,8 +39,8 @@ Object.defineProperties(DefocuserLibrary, {
   }
 })
 
-module.exports = DefocuserLibrary
-
 if (window && window.Vue) {
   window.Vue.use(DefocuserLibrary)
 }
+
+export default DefocuserLibrary

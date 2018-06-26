@@ -1,6 +1,6 @@
 {
   "name": "defocuser-vue",
-  "version": "0.0.7-beta",
+  "version": "0.0.7-beta.2",
   "description": "Vue plugin for Defocuser",
   "main": "dist/defocuser-vue.umd.js",
   "scripts": {

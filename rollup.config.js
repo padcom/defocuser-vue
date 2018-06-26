@@ -1,9 +1,12 @@
 import babel from 'rollup-plugin-babel'
 import minify from 'rollup-plugin-minify'
 
+const pkg = require('./package.json')
+const external = Object.keys(pkg.dependencies)
+
 export default {
   input: 'index.js',
-  external: [ 'defocuser' ],
+  external,
   output: [ {
     globals: [ 'defocuser' ],
     file: 'dist/defocuser-vue.umd.js',
