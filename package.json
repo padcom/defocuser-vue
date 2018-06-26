@@ -1,6 +1,6 @@
 {
   "name": "defocuser-vue",
-  "version": "0.0.7-beta.6",
+  "version": "0.0.8",
   "description": "Vue plugin for Defocuser",
   "main": "index.js",
   "files": [
