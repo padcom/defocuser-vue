@@ -1,11 +1,8 @@
 {
   "name": "defocuser-vue",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "Vue plugin for Defocuser",
-  "main": "index.js",
-  "files": [
-    "dist/defocuser-vue.umd.js"
-  ],
+  "main": "dist/defocuser-vue.umd.js",
   "scripts": {
     "dev": "rollup -c -n defocuser-vue -w",
     "build": "rollup -c -n defocuser-vue"
