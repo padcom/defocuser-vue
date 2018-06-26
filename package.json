@@ -1,12 +1,13 @@
 {
   "name": "defocuser-vue",
-  "version": "0.1.0-beta",
+  "version": "0.1.1",
   "description": "Vue plugin for Defocuser",
   "module": "index.js",
   "main": "dist/defocuser-vue.iife.js",
   "scripts": {
-    "dev": "rollup -c -n DefocuserVue -w",
-    "build": "rollup -c -n defocuser-vue"
+    "dev": "npm run build -- -w",
+    "build": "rollup -c -n DefocuserVue",
+    "prepublish": "npm run build"
   },
   "keywords": [
     "defocuser",
