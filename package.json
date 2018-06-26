@@ -1,10 +1,11 @@
 {
   "name": "defocuser-vue",
-  "version": "0.0.10",
+  "version": "0.1.0-beta",
   "description": "Vue plugin for Defocuser",
-  "main": "dist/defocuser-vue.umd.js",
+  "module": "index.js",
+  "main": "dist/defocuser-vue.iife.js",
   "scripts": {
-    "dev": "rollup -c -n defocuser-vue -w",
+    "dev": "rollup -c -n DefocuserVue -w",
     "build": "rollup -c -n defocuser-vue"
   },
   "keywords": [
@@ -29,6 +30,7 @@
     "rollup-plugin-babel": "^3.0.5",
     "rollup-plugin-commonjs": "^9.1.3",
     "rollup-plugin-minify": "^1.0.3",
-    "rollup-plugin-node-resolve": "^3.3.0"
+    "rollup-plugin-node-resolve": "^3.3.0",
+    "rollup-plugin-uglify-es": "0.0.1"
   }
 }

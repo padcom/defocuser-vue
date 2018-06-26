@@ -21,7 +21,7 @@ const defocusSecondary = {
   }
 }
 
-const DefocuserLibrary = {
+const DefocuserPlugin = {
   defocus,
   defocusSecondary,
 
@@ -31,7 +31,7 @@ const DefocuserLibrary = {
   }
 }
 
-Object.defineProperties(DefocuserLibrary, {
+Object.defineProperties(DefocuserPlugin, {
   defocuser: {
     get: function() {
       return defocuser // instance of the actual defocuser
@@ -40,7 +40,7 @@ Object.defineProperties(DefocuserLibrary, {
 })
 
 if (window && window.Vue) {
-  window.Vue.use(DefocuserLibrary)
+  window.Vue.use(DefocuserPlugin)
 }
 
-export default DefocuserLibrary
+export default DefocuserPlugin

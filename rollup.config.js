@@ -1,19 +1,15 @@
-import babel from 'rollup-plugin-babel'
 import resolve from 'rollup-plugin-node-resolve'
-import commonjs from 'rollup-plugin-commonjs'
-import minify from 'rollup-plugin-minify'
+import uglify from 'rollup-plugin-uglify-es'
 
 export default {
   input: 'index.js',
   output: [ {
-    file: 'dist/defocuser-vue.umd.js',
-    format: 'umd',
-    name: 'defocuser-vue',
+    file: 'dist/defocuser-vue.iife.js',
+    format: 'iife',
+    name: 'defocuserVue',
   } ],
   plugins: [
     resolve(),
-    commonjs(),
-    babel({ exclude: 'node_modules/**' }),
-    minify({ umd: 'dist/defocuser-vue.umd.min.js' })
+    uglify()
   ]
 }
