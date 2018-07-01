@@ -1,6 +1,7 @@
 {
   "name": "defocuser-vue",
-  "version": "0.1.3",
+  "version": "0.1.4",
+  "tag": "latest",
   "description": "Vue plugin for Defocuser",
   "module": "index.js",
   "main": "dist/defocuser-vue.iife.js",
@@ -21,7 +22,7 @@
     "url": "https://github.com/padcom/defocuser-vue"
   },
   "dependencies": {
-    "defocuser": "0.1.1"
+    "defocuser": "0.1.3"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
